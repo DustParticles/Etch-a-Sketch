@@ -1,0 +1,42 @@
+body {
+    background-color: bisque;
+}
+
+
+
+.grids {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    background-color: white;
+    gap: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    
+           
+
+    
+    
+
+    
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.gridBlock {
+    
+    width: 69px;
+    height: 69px;
+    
+    padding: 0fr;
+    margin: 0mm;
+
+    background-color: white;
+}
+
+.gridBlock:hover {
+    background-color: grey;
+    opacity: 0.1;
+}
