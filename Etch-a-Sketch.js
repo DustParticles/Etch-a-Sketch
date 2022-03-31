@@ -1,11 +1,25 @@
-let gridSize = 8
+let gridSize = 8;
+const colorPick = document.querySelector("#colorPicker");
+const gridContainer = document.querySelector(".grids");
 
-const grids = document.querySelector(".grids");
-
-//add each grid into the container
-for (let num = 0; num < gridSize**2; num++) {
-    let gridContainer = document.createElement('div');
-    gridContainer.classList.add('gridBlock');
-    grids.appendChild(gridContainer);
+//create and add each grid into the container
+for (let entries = 0; entries < gridSize**2; entries++) {
+    let grids = document.createElement('div');
+    grids.classList.add('gridBlock');
+    grids.setAttribute("draggable", "false")
+    gridContainer.appendChild(grids);
     
+}
+
+//select all gridBlocks
+let gridBlocks = document.querySelectorAll(".gridBlock");
+
+//detects if is being hovered over
+gridBlocks.forEach(
+    hovered => hovered.addEventListener("mouseover", isHovered)
+);
+
+//change color if hovered
+function isHovered() {
+    this.style.backgroundColor = colorPick.value;
 }

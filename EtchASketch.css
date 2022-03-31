@@ -12,11 +12,6 @@ body {
     padding: 0px;
     margin: 0px;
 
-    
-           
-
-    
-    
 
     
 }
@@ -32,11 +27,12 @@ body {
     
     padding: 0fr;
     margin: 0mm;
-
     background-color: white;
 }
 
 .gridBlock:hover {
     background-color: grey;
     opacity: 0.1;
+
 }
+
