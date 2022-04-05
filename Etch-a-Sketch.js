@@ -1,9 +1,7 @@
 //assigns grid size
 let sliderValue = document.querySelector(".pixelSize");
-let submitNewSize = document.querySelector(".submitNewPixelSize");
 let sliderOutput = document.querySelector(".sliderOutput");
 let gridSelector = document.querySelector(".grids")
-
 //display current grid size
 sliderOutput.textContent = `${sliderValue.value} x ${sliderValue.value}`
 
@@ -41,7 +39,7 @@ sliderValue.addEventListener('change', function () {
 
 function gridAppend(gridSize) {
     //does calculation stuff
-    let HeightAndWidth = dimensionCalc(gridSize);
+    dimensionCalc(gridSize);
 
     for (let entries = 0; entries < gridSize**2; entries++) {
         let createGrids = document.createElement('div');
@@ -70,7 +68,7 @@ function dimensionCalc(gridSize) {
     heightCanvas /= gridSize;
     widthCanvas  /= gridSize;
 
-    //leaves 1 decimal
+    //leaves 2 decimal
     height = heightCanvas.toFixed(2);
     width = widthCanvas.toFixed(2);
 }
@@ -120,6 +118,6 @@ resetButton.addEventListener("click", resetColor);
 function resetColor() {
     let gridBlocks = document.querySelectorAll(".gridBlock");
     gridBlocks.forEach(color => {
-        color.style.backgroundColor = "white";
+        color.style.backgroundColor = "";
     });
 }
